@@ -35,6 +35,9 @@ public class DaemonThread {
 
         for (int i = 0; i < inputNumbers.size(); i++) {
             FactorialThread factorialThread = threads.get(i);
+            System.out.println("The thread " + factorialThread.getId() + " and input number " + factorialThread.getInputNumber());
+            System.out.println("Is this thread a Daemon thread? ");
+            System.out.println(factorialThread.isDaemon());
             if (factorialThread.isFinished()) {
                 System.out.println("Factorial of " + inputNumbers.get(i) + " is " + factorialThread.getResult());
             } else {
